@@ -1,0 +1,66 @@
+https://www.django-rest-framework.org/
+https://www.django-rest-framework.org/tutorial/quickstart/
+
+0.0 - Check python
+    python --version
+        instalar python
+0.1 - Check virtualenv
+    virtualenv --version OU python -m virtualenv --version 
+        pip install virtualenv
+
+1 - Estabeleça um ambiente virtual dentro do diretório do projeto
+    virtualenv venv OU python -m virtualenv venv
+
+2 - Ative o ambiente virtual
+    venv/Scripts/activate
+        deactivate
+
+3 - Instale o Django
+    pip install djangorestframework
+
+4 - Crie o projeto Django
+    django-admin startproject api_todo .
+
+5 - No arquivo settings.py incluir libs em INSTALLED_APPS
+    "django.contrib.staticfiles",
+    # Libs
+    "rest_framework", # <-- essa
+
+6 - Criar um novo APP
+    python manage.py startapp app
+
+7 - No arquivo settings.py incluir Apps em INSTALLED_APPS
+    "django.contrib.staticfiles",
+    # App
+    "app", # <-- essa    
+    # Libs
+    "rest_framework",
+
+8 - Após criar models deve-se criar os migrates
+    python manage.py makemigrations
+
+9 - Após criar os migrates deve-se executa-los
+    python manage.py migrate
+
+10 - Instale o IPython (terminal shell do python mais robusto)
+    pip install ipython
+    # para executar o IPython
+    python manage.py shell
+
+11 - Criar os métodos REST na views.py 
+
+12 - Criar arquivo urls.py dentro da pasta app
+    from app.views import todo_list
+    from django.urls import path
+    urlpatterns = [
+        path("", todo_list),
+    ]
+
+13 - Incluir no arquivo "principal" de urls.py
+    urlpatterns = [
+        path("admin/", admin.site.urls),
+        path("todo/", include("app.urls")), # <-- esse
+    ]
+
+14 - Rode o servidor pela primeira vez
+    python manage.py runserver
