@@ -64,3 +64,10 @@ https://www.django-rest-framework.org/tutorial/quickstart/
 
 14 - Rode o servidor pela primeira vez
     python manage.py runserver
+
+15 - Incluir projeto no git
+    git init
+    git add .
+    git commit -m "descrição"
+    git remote add origin <endereço do git>
+    git push origin master
