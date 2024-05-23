@@ -65,7 +65,11 @@ https://www.django-rest-framework.org/tutorial/quickstart/
 14 - Rode o servidor pela primeira vez
     python manage.py runserver
 
-15 - Incluir projeto no git
+15 - Gere o aarquivo requirements.txt
+    pip freeze
+    pip freeze > requirements.txt
+
+16 - Incluir projeto no git
     git init
     git add .
     git commit -m "descrição"
