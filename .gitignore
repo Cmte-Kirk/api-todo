@@ -27,7 +27,7 @@ static/
 # Distribution / packaging
 .Python
 build/
-staticfiles_build/
+staticfiles_build/*
 develop-eggs/
 dist/
 downloads/
