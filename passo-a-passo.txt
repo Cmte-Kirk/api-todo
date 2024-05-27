@@ -65,11 +65,20 @@ https://www.django-rest-framework.org/tutorial/quickstart/
 14 - Rode o servidor pela primeira vez
     python manage.py runserver
 
-15 - Gere o aarquivo requirements.txt
+15 - Instaale o dotenv para criar variaveis de ambiente
+    pip install python-dotenv
+    
+16 - Instaale o psycopg para conectar ao Postgres
+    pip install psycopg-binary
+
+17 - Instaale o dj-database-url para pegar a variável database no .env e configurar o banco
+    pip install dj-database-url
+
+16 - Gere o aarquivo requirements.txt
     pip freeze
     pip freeze > requirements.txt
 
-16 - Incluir projeto no git
+17 - Incluir projeto no git
     git init
     git add .
     git commit -m "descrição"
