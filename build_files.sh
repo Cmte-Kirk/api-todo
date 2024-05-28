@@ -1,5 +1,7 @@
 echo " BUILD START"
 
+python3.9 --version
+python3.9 -m ensurepip
 python3.9 -m pip install -r requirements.txt
 
 echo " MAKE MIGRATIONS..."
